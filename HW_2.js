@@ -57,6 +57,9 @@ class Kitchen {
                 for (let j = 0; j < this.fridge.length; j++) {
                     if (Dish.needs[i].name === this.fridge[j].name) {
                         this.fridge[j].amount -= Dish.needs[i].amount;
+                        if (this.fridge[j].amount === 0) {
+                            this.fridge.splice(j, 1);
+                        }
                     }
                 }
             }
