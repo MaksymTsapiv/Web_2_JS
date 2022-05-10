@@ -25,8 +25,8 @@ function addBox(e) {
     console.log(e.target.offsetTop, e.target.offsetHeight);
     newBox.style.top = (e.target.offsetTop + e.target.offsetHeight) + 'px';
     newBox.style.left = (e.target.offsetLeft + e.target.offsetWidth) + 'px'
-    console.log(clonedBox.style.top);
-    box.appendChild(clonedBox);
+    console.log(newBox.style.top);
+    box.appendChild(newBox);
 }
 function deleteBox(e) {
     if (box.getElementsByTagName('*').length !== 0) {
